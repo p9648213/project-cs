@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import SideMenu from "@/components/SideMenu";
+import { CollapseContextProvider } from "@/context/collapse-context";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <SideMenu />
-        <Header />
-        {children}
+        <CollapseContextProvider>
+          <SideMenu />
+          <Header />
+          {children}
+        </CollapseContextProvider>
       </body>
     </html>
   );
