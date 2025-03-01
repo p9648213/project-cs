@@ -30,6 +30,7 @@ const menuItems = [
 
 const SideMenu = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
+
   return (
     <nav
       className={cn(

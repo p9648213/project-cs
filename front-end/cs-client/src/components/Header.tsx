@@ -1,40 +1,41 @@
 import { Search, Bell, User, Wallet } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 right-0 left-64 h-16 bg-casino-card/95 backdrop-blur-sm border-b border-white/5 flex items-center justify-between px-6 z-10">
+    <header className="top-0 right-0 left-64 z-10 fixed flex justify-between items-center bg-casino-card/95 backdrop-blur-sm px-6 border-white/5 border-b h-16">
       <div className="flex items-center gap-4">
         <div className="relative">
-          <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+          <Search className="top-1/2 left-3 absolute w-4 h-4 text-gray-500 -translate-y-1/2 transform" />
           <input
             type="search"
             placeholder="Search games..."
-            className="pl-10 pr-4 py-2 h-9 bg-white/5 border border-white/5 rounded-lg focus:outline-none focus:ring-1 focus:ring-casino-red/50 w-64 text-sm"
+            className="bg-white/5 py-2 pr-4 pl-10 border border-white/5 rounded-lg focus:outline-none focus:ring-1 focus:ring-casino-red/50 w-64 h-9 text-sm"
           />
         </div>
         <nav className="hidden lg:flex items-center gap-6 ml-6">
-          <a
-            href="#"
-            className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+          <Link
+            href="/roulette"
+            className="font-medium text-gray-400 hover:text-white text-sm transition-colors"
           >
             Roulette
-          </a>
+          </Link>
           <a
             href="#"
-            className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+            className="font-medium text-gray-400 hover:text-white text-sm transition-colors"
           >
             Crash
           </a>
           <a
             href="#"
-            className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+            className="font-medium text-gray-400 hover:text-white text-sm transition-colors"
           >
             Coinflip
           </a>
           <a
             href="#"
-            className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+            className="font-medium text-gray-400 hover:text-white text-sm transition-colors"
           >
             Case Battle
           </a>
@@ -46,7 +47,7 @@ const Header = () => {
           size="sm"
           className="bg-white/5 hover:bg-white/10 text-gray-300"
         >
-          <Wallet className="w-4 h-4 mr-2" />
+          <Wallet className="mr-2 w-4 h-4" />
           <span>0.00</span>
         </Button>
         <Button
@@ -55,10 +56,10 @@ const Header = () => {
           className="relative text-gray-300 hover:text-white"
         >
           <Bell className="w-5 h-5" />
-          <span className="absolute -top-1 -right-1 w-2 h-2 bg-casino-red rounded-full" />
+          <span className="-top-1 -right-1 absolute bg-casino-red rounded-full w-2 h-2" />
         </Button>
         <Button className="bg-casino-red hover:bg-casino-red/90 h-9">
-          <User className="w-4 h-4 mr-2" />
+          <User className="mr-2 w-4 h-4" />
           Sign In
         </Button>
       </div>
