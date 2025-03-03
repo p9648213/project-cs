@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 import logo from "@/app/logo.png";
 import { useState } from "react";
 import { Button } from "./ui/button";
+import { useCollapseContext } from "@/context/collapse-context";
 
 const menuItems = [
   { icon: Home, label: "Casino", href: "#" },
@@ -29,14 +30,14 @@ const menuItems = [
 ];
 
 const SideMenu = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const { isCollapsed, setIsCollapsed } = useCollapseContext();
 
   return (
     <nav
       className={cn(
-        "h-screen bg-casino-card fixed left-0 top-0 p-6 border-r border-white/10 transition-all duration-300",
-        isCollapsed ? "w-25" : "w-64"
+        "h-screen bg-casino-card fixed left-0 top-0 p-6 border-r border-white/10"
       )}
+      style={{ width: isCollapsed ? "96px" : "256px" }}
     >
       <div className="flex items-center gap-2 mb-8">
         {!isCollapsed && (

@@ -1,7 +1,15 @@
+"use client";
+import { useCollapseContext } from "@/context/collapse-context";
 import React from "react";
 
-const roulette = () => {
-  return <div className="mt-16 ml-64 p-4 text-white">roulette</div>;
+const RoulettePage = () => {
+  const { isCollapsed } = useCollapseContext();
+  const marginLeft = isCollapsed ? "96px" : "256px";
+  return (
+    <div className="mt-16 p-4 text-white" style={{ marginLeft: marginLeft }}>
+      roulette
+    </div>
+  );
 };
 
-export default roulette;
+export default RoulettePage;
