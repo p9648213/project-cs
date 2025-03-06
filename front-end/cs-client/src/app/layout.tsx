@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
-import SideMenu from "@/components/SideMenu";
+import Header from "@/components/header";
+import SideMenu from "@/components/side-menu";
 import { CollapseContextProvider } from "@/context/collapse-context";
 
 export const metadata: Metadata = {

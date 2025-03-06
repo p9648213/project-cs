@@ -1,6 +1,6 @@
-import HeroSection from "@/components/HeroSection";
-import BonusCards from "@/components/BonusCards";
-import JackpotsSection from "@/components/JackpotsSection";
+import HeroSection from "@/components/hero-section";
+import BonusCards from "@/components/bonus-cards";
+import JackpotsSection from "@/components/jackpots-section";
 import Footer from "@/components/footer";
 
 const HomePage = () => {

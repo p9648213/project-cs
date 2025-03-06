@@ -17,6 +17,7 @@ import logo from "@/app/logo.png";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { useCollapseContext } from "@/context/collapse-context";
+import Link from "next/link";
 
 const menuItems = [
   { icon: Home, label: "Casino", href: "#" },
@@ -39,11 +40,16 @@ const SideMenu = () => {
       )}
       style={{ width: isCollapsed ? "96px" : "256px" }}
     >
-      <div className="flex items-center gap-2 mb-8">
-        {!isCollapsed && (
-          <Image src={logo} alt="Logo" width={200} height={200} />
-        )}
-      </div>
+      <Link
+        href="/"
+        className="font-medium text-gray-400 hover:text-white text-sm transition-colors"
+      >
+        <div className="flex items-center gap-2 mb-8">
+          {!isCollapsed && (
+            <Image src={logo} alt="Logo" width={200} height={200} />
+          )}
+        </div>
+      </Link>
       <Button
         variant="ghost"
         size="icon"
